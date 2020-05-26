@@ -1,0 +1,198 @@
+<!-- <p>{{ nombre }}</p> crear un nombre normal -->
+<!-- <button (click) = "cambiarNombre()">cambiar</button> crea un botton normal-->
+<!-- esto es para una lista
+    <ul>
+    <li *ngFor="let String of arr">{{String}}</li>
+</ul> -->
+<!-- tabla-->
+
+<style type="text/css">
+    nav a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 14px;
+        text-align: end;
+    }
+
+    nav li {
+        display: inline-block;
+        width: 150px;
+        height: 30px;
+        padding: 5px 10px;
+        background-color: rgb(13, 95, 10);
+        border: 1px solid rgb(0, 0, 0);
+        text-align: center;
+        color: #fff;
+        position: relative;
+    }
+
+    nav li:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    nav li>ul {
+        display: none;
+    }
+
+    nav li:hover>ul {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 0px;
+    }
+
+    div.portada {
+        background-image: url("https://s1.1zoom.me/big0/747/423069-Kycb.jpg");
+        width: 100%;
+        margin: 20px auto;
+        background-color: black;
+        color: #fff;
+        padding: 15px;
+    }
+
+    div.portada img.izquierda {
+        float: left;
+        margin-right: 15px;
+    }
+
+    div.portada img.derecha {
+        float: right;
+        margin-left: 15px;
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(21, 155, 9);
+        text-align: center;
+    }
+
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #155f06;
+        color: black;
+    }
+
+    h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    h4 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+    }
+
+    /* botones de establecimiento*/
+
+    div.botones {
+        width: 100%;
+        margin: 20px auto;
+        background-color: rgb(255, 255, 255);
+        color: #fff;
+        padding: 15px;
+    }
+
+    #menu ul li {
+        background-color: #2e518b;
+
+    }
+
+    #menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu ul a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 15px;
+        padding: 10px;
+        font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    #menu ul li {
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0;
+        /* Posicion del boton*/
+        width: 110px;
+        margin-left: 10%;
+        transform: translateX(-50%);
+    }
+
+    #menu ul li:hover {
+        background: #5b78a7;
+    }
+
+    #menu ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+    }
+
+    #menu ul ul li {
+        float: none;
+        width: 150px
+    }
+
+    #menu ul ul a {
+        line-height: 120%;
+        padding: 10px 15px;
+    }
+
+    #menu ul li:hover>ul {
+        display: block;
+    }  
+</style>
+
+<nav>
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Quiénes somos</a></li>
+        <li><a href="#">Servicios</a>
+            <ul>
+                <li><a href="">Reservaciones</a></li>
+                <li><a href="">Horarios</a></li>
+                <li><a href="">Establecimientos</a></li>
+                <li><a href=""></a>Lugares</li>
+            </ul>
+        </li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Registrarse</a></li>
+        <li><a href="#">Iniciar Sesion</a></li>
+    </ul>
+</nav>
+
+<div class="portada">
+    <h1>CANCHA SINTÉTICAS FUSAGÁSUGA</h1>
+    <h3>"No soy un Dios, sólo soy un futbolista"</h3>
+    <h3>Zinedine Zidane</h3>
+    <!--
+    <img class="izquierda"
+        src="https://p4.wallpaperbetter.com/wallpaper/46/561/118/soccer-stadium-at-night-hd-wallpaper-wallpaper-preview.jpg"
+        width="400" height="162">
+    <aside></aside>
+
+    <img class="derecha"
+        src="https://lh3.googleusercontent.com/proxy/qLAXHQgqO18lWzi7w0FDRShyooZXrESSf9vdEDuHiZ_exdQt7g8BqJlgd29CzO_Ir1Q7c8sr48_XBbfL6cQD7wAeSD7kK9PBFllzhtlLXU9sJuE"
+        width="370" height="162">
+    <aside>
+        <h1>CANCHA SINTÉTICAS FUSAGÁSUGA</h1>
+        <h3>"No soy un Dios, sólo soy un futbolista"</h3>
+        <h3>Zinedine Zidane</h3>
+    </aside>-->
+
+</div>
+
+<h2> </h2>

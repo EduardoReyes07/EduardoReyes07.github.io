@@ -1,0 +1,1016 @@
+<style type="text/css">
+    /* botones de establecimiento*/
+
+    div.botones {
+        width: 100%;
+        margin: 20px auto;
+        background-color: rgb(255, 255, 255);
+        color: #fff;
+        padding: 15px;
+    }
+
+    #menu ul li {
+        background-color: #30c41c15;
+
+    }
+
+    #menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu ul a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 15px;
+        padding: 10px;
+        font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    #menu ul li {
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0;
+        /* Posicion del boton*/
+        width: 110px;
+        margin-left: 10%;
+        transform: translateX(-50%);
+    }
+
+    #menu ul li:hover {
+        background: #00000000;
+    }
+
+    #menu ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+    }
+
+    #menu ul ul li {
+        float: none;
+        width: 150px
+    }
+
+    #menu ul ul a {
+        line-height: 120%;
+        padding: 10px 15px;
+    }
+
+    #menu ul li:hover>ul {
+        display: block;
+    }
+
+    /* tablas*/
+
+    form.zpestanya {
+        font-size: 0.8em;
+        width: 90em;
+        position: relative;
+    }
+
+    span.zhueco {
+        background-color: transparent;
+        border: 0;
+        border-bottom: rgba(0, 0, 0, 0.151) solid 1px;
+    }
+
+    a.zvinculo {
+        background-color: rgb(6, 7, 6);
+        color: rgb(1, 3, 1);
+        border: rgb(6, 14, 7) solid 1px;
+        font-weight: normal;
+        text-decoration: none;
+        outline: none;
+    }
+
+    span.ztitulo {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    a.zvinculo span.zinterior {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        color: rgb(0, 0, 0);
+        margin: 0.2em;
+        height: 35em;
+        width: 110em;
+        overflow: auto;
+        border: 0;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    a.zvinculo:focus {
+        background-color: rgb(0, 0, 0);
+        border-bottom-color: rgb(0, 0, 0);
+        color: rgb(12, 15, 2);
+    }
+
+    a.zvinculo:focus span.zinterior {
+        z-index: 1;
+    }
+
+    div.zcontenedor {
+        padding: 0.2em;
+        height: 11em;
+        background-color: rgb(0, 0, 0);
+        border: rgb(27, 94, 13) solid 80px;
+    }
+
+    /*imagenes*/
+    * {
+        background-image: url("https://img.freepik.com/foto-gratis/fondo-campo-hierba-verde-futbol-deportes-futbol_64749-1823.jpg?size=626&ext=jpg");
+        background-color: rgb(209, 202, 202);
+    }
+
+    .galeria {
+        background-image: url("https://fondos.fondoshd.com/images/hd/planeta-azul-5303c81748a17.jpg");
+        height: calc(300px + 3em);
+        width: 260px;
+        margin: 1em auto;
+        border: 2px solid rgb(32, 58, 32);
+        position: relative;
+
+    }
+
+    .galeria img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 3s;
+    }
+
+    .galeria input[type=radio] {
+        position: relative;
+        bottom: calc(-300px - 1.5em);
+        left: .5em;
+    }
+
+    .galeria input[type=radio]:nth-of-type(1):checked~img:nth-of-type(1) {
+        opacity: 1;
+    }
+
+    .galeria input[type=radio]:nth-of-type(2):checked~img:nth-of-type(2) {
+        opacity: 1;
+    }
+
+    .galeria input[type=radio]:nth-of-type(3):checked~img:nth-of-type(3) {
+        opacity: 1;
+    }
+
+    .galeria input[type=radio]:nth-of-type(4):checked~img:nth-of-type(4) {
+        opacity: 1;
+    }
+
+    .espacio {
+        margin: 1em auto;
+        position: relative;
+    }
+
+    table {
+        background-color: #f00;
+    }
+
+    /* textos*/
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(21, 141, 10);
+        background: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(21, 141, 10);
+        background: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("https://s1.1zoom.me/big0/747/423069-Kycb.jpg");
+        text-align: center;
+    }
+
+    .boton {
+        background-image: url("data:image/jpeg;base64,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");
+        border: 1px solid #020305;
+        /*anchura, estilo y color borde*/
+        padding: 10px;
+        /*espacio alrededor texto*/
+        background-color: #2e518b;
+        /*color botón*/
+        color: #ffffff;
+        /*color texto*/
+        text-decoration: none;
+        /*decoración texto*/
+        text-transform: uppercase;
+        /*capitalización texto*/
+        font-family: 'Helvetica', sans-serif;
+        /*tipografía texto*/
+        border-radius: 50px;
+        /*bordes redondos*/
+    }
+
+    /*login*/
+    header {
+        color: rgb(250, 250, 250);
+        font-family: Impact;
+    }
+
+    body {
+        text-align: center;
+        color: white;
+        background-color: black;
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    button {
+        text-align: center;
+        color: white;
+        background-color: rgb(15, 211, 32);
+        padding: 5px;
+        font-size: 18px;
+        font-family: Impact;
+    }
+
+    /*registrarse*/
+</style>
+
+<!-- botones de establecimiento -->
+
+<form class="zpestanya">
+    <!--  primer tab con tabindex="100" -->
+    <span class="zhueco">&nbsp;</span><a class="zvinculo" tabindex="100" href="javascript:"><span
+            class="ztitulo">Establecimientos</span><span class="zinterior">
+            <nav id="menu">
+                <ul>
+                    <li><img src="https://pbs.twimg.com/media/D1lWug4X4AMfp__.jpg" width="200" height="200" />
+                        <a href="#">CANCHA CAPRI</a></li>
+                    <li><img src="https://lh3.googleusercontent.com/p/AF1QipOzkZt_pBeYMID7GDMSQLQkmQAjg7yplxervBKn=w1024-k"
+                            width="200" height="200">
+                        <a href="#">CANCHA CANEY</a></li>
+                    <li><img src="https://laspaginasamarillasdecolombia.com/sumapaz/miweb/palmasfutbolclub/data1/images/foto4.jpg"
+                            width="200" height="200">
+                        <a href="#">CANCHA LAS PALMAS</a></li>
+                    <li><img src="https://secureservercdn.net/198.71.233.47/l5y.1c3.myftpupload.com/wp-content/uploads/2019/12/2_orig-1.jpg?time=1581797691"
+                            width="200" height="200">
+                        <a href="#">CANCHA LILU</a></li>
+                </ul>
+            </nav>
+        </span></a>
+    <!--  segundo tab con tabindex="101"-->
+    <span class="zhueco">&nbsp;</span><a class="zvinculo" tabindex="101" href="javascript:"><span
+            class="ztitulo">Quienes somos</span><span class="zinterior">
+            un grupo de perezosos xD
+        </span></a>
+    <!--  tercer tab con tabindex="102" -->
+    <span class="zhueco">&nbsp;</span><a class="zvinculo" tabindex="101" href="javascript:"><span
+            class="ztitulo">Horario</span><span class="zinterior">
+            <table class="egt">
+                <H1>Horario de la mañana</H1>
+                <tr>
+                    <th scope="row" style="background:rgb(255, 255, 255)">
+                        <h3>Día</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Lunes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Martes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Miércoles</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Jueves</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Viernes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Sabado</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Domingo</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>9 Am</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgba(17, 131, 42, 0.829)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>8 Am</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>9 Am</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>10 Am</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>11 Am</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>12 Am</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <a class="boton" target="_blank">. Reservacion .</a>
+                </tr>
+            </table>
+            <h1></h1>
+            <table class="egt">
+                <H1>Horario de la tarde</H1>
+                <tr>
+                    <th scope="row" style="background:rgb(255, 255, 255)">
+                        <h3>Día</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Lunes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Martes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Miércoles</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Jueves</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Viernes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Sabado</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Domingo</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>1 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>2 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>3 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>4 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>5 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <a class="boton" target="_blank">. Reservacion .</a>
+                </tr>
+            </table>
+            <h1></h1>
+            <table class="egt">
+                <H1>Horario de la noche</H1>
+                <tr>
+                    <th scope="row" style="background:rgb(255, 255, 255)">
+                        <h3>Día</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Lunes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Martes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Miércoles</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Jueves</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Viernes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Sabado</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Domingo</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>6 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>7 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>8 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>9 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>10 Pm</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Dinsponible</h3>
+                    </th>
+                    <a class="boton" target="_blank">. Reservacion .</a>
+                </tr>
+            </table>
+        </span></a>
+    <!-- cuarta más tabs aquí -->
+    <span class="zhueco">&nbsp;</span><a class="zvinculo" tabindex="101" href="javascript:"><span
+            class="ztitulo">Reservacion</span><span class="zinterior">
+            <table class="egt">
+                <H1>Reservaciones</H1>
+                <tr>
+                    <th scope="row" style="background:rgb(255, 255, 255)">
+                        <h3>Nombres de Usuario</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Num Celular</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>ESTABLECIMIENTO</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Hora</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Eduardo Reyes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>*******003</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>...</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>...</h3>
+                    </th>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Eduardo Reyes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>*******003</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>...</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>...</h3>
+                    </th>
+            </table>
+        </span></a>
+    <!-- quinta más tabs aquí -->
+    <span class="zhueco">&nbsp;</span><a class="zvinculo" tabindex="101" href="javascript:"><span
+            class="ztitulo">Contacto</span><span class="zinterior">
+            <table class="egt">
+                <H1>Servivio al cliente</H1>
+                <tr>
+                    <th scope="row" style="background:rgb(255, 255, 255)">
+                        <h3>Nombres</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Num Celular</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>e-mail</h3>
+                </tr>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Eduardo Reyes</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>3006595003</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>eduardoreyes@gmail.com</h3>
+                    </th>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Juan Lopez</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>313 3537322</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>juanlopez@gmail.com</h3>
+                    </th>
+                <tr>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>Cristian Ballen</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>320 5581490</h3>
+                    </th>
+                    <th style="background:rgb(255, 255, 255)">
+                        <h3>cristianballen@gmail.com</h3>
+                    </th>
+                </tr>
+            </table>
+        </span></a>
+    <!-- sexta más tabs aquí -->
+    <span class="zhueco">&nbsp;</span><a class="zvinculo" tabindex="101" href="javascript:"><span
+            class="ztitulo">Registrarse</span><span class="zinterior">
+
+            <head>
+                <meta charset="utf-8">
+                <!--son fundamentales pueda categorisar o posicionar en las busquedas-->
+                <title>Registrarse</title>
+                <meta charset="iso-8559-1" />
+                <!--da una referencia a la busqueda-->
+            </head>
+
+            <body>
+                <form style="background-image:url(https://images5.alphacoders.com/571/thumb-1920-571559.jpg)">
+                    <header style="background-image:url(https://images5.alphacoders.com/571/thumb-1920-571559.jpg)">
+                        Registrarse</header>
+                    <h1></h1>
+                    Username:<input type="text" name="user" placeholder="user" minlength="10" required=true>
+                    <h1></h1>
+                    # phone: <input type="text" name="user" placeholder="user" minlength="10" required=true>
+                    <h1></h1>
+                    Document:<input type="password" name="direccion" placeholder="Password" minlength="10"
+                        required=true>
+                    <h1></h1>
+                    Password:<input type="password" name="direccion" placeholder="Password" minlength="10"
+                        required=true>
+                    <h1></h1>
+                    ✔ Al hacer clic en "Registrarte", aceptas nuestras Condiciones
+                    <h1></h1>
+                    <button name="button"
+                        style="background-image:url(data:image/jpeg;base64,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)">Registrarte</button>
+                </form>
+            </body>
+        </span></a>
+    <!-- sectima más tabs aquí -->
+    <span class="zhueco">&nbsp;</span><a class="zvinculo" tabindex="101" href="javascript:"><span
+            class="ztitulo">Iniciar Sesion</span><span class="zinterior">
+
+            <head>
+                <meta charset="utf-8">
+                <!--son fundamentales pueda categorisar o posicionar en las busquedas-->
+                <title>Login en sistema</title>
+                <meta charset="iso-8559-1" />
+                <!--da una referencia a la busqueda-->
+            </head>
+
+            <body>
+                <form style="background-image:url(https://images5.alphacoders.com/571/thumb-1920-571559.jpg)">
+                    <header style="background-image:url(https://images5.alphacoders.com/571/thumb-1920-571559.jpg)">
+                        Loging</header>
+                    <h1></h1>
+                    Username:<input type="text" name="user" placeholder="user" minlength="10" required=true>
+                    <h1></h1>
+                    Password:<input type="password" name="direccion" placeholder="Password" minlength="10"
+                        required=true>
+                    <h1></h1>
+                    ¿Olvidaste tu contraseña?
+                    <h1></h1>
+                    <button name="button"
+                        style="background-image:url(data:image/jpeg;base64,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)">Iniciar
+                        Sesion</button>
+                </form>
+            </body>
+        </span></a>
+    <!--  tab de fondo -->
+    <span class="zhueco">&nbsp;</span><a class="zvinculo" tabindex="199" href="javascript:" style="border: 0"><span
+            class="zinterior">
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <div class="galeria">
+                            <input type="radio" name="navegacion1" id="_5" checked>
+                            <input type="radio" name="navegacion1" id="_6">
+                            <input type="radio" name="navegacion1" id="_7">
+                            <input type="radio" name="navegacion1" id="_8">
+                            <img src="https://www.epicentrochile.com/wp-content/uploads/2016/02/FOTOpasto.jpg"
+                                width="260" height="300" alt="Galeria CSS 1" />
+                            <img src="https://www.eltiempo.com/contenido///bogota/IMAGEN/IMAGEN-15871535-2.png"
+                                width="260" height="300" alt="Galeria CSS 2" />
+                            <img src="https://i.ytimg.com/vi/6WIqLKbXzEU/maxresdefault.jpg" width="260" height="300"
+                                alt="Galeria CSS 3" />
+                            <img src="https://www.innovaships.cl/wp-content/uploads/2011/02/Cancha-pasto-sintetico1-1170x500.jpg"
+                                width="260" height="300" alt="Galeria CSS 4" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="espacio">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="galeria">
+                            <input type="radio" name="navegacion2" id="_1" checked>
+                            <input type="radio" name="navegacion2" id="_2">
+                            <input type="radio" name="navegacion2" id="_3">
+                            <input type="radio" name="navegacion2" id="_4">
+                            <img src="https://i.pinimg.com/originals/d6/cd/19/d6cd192d348988de95b3bc6607845cc9.jpg"
+                                width="260" height="300" alt="Galeria CSS 1" />
+                            <img src="https://static.wixstatic.com/media/444ae8_e79b38abb0774f5f94dc52d2eee7f69f.jpg/v1/fill/w_606,h_348,al_c,q_80,usm_0.66_1.00_0.01/444ae8_e79b38abb0774f5f94dc52d2eee7f69f.webp"
+                                width="260" height="300" alt="Galeria CSS 2" />
+                            <img src="https://cdn.eleco.com.ar/media/2020/05/28ffdb42-tdzulrbzuictupd-800x450-nopad.jpg"
+                                width="260" height="300" alt="Galeria CSS 3" />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQDgmC1OD0qjBLw9oCqu6BJppLKIpgBXQkm38sbV1APyGzK5uBK&usqp=CAU"
+                                width="260" height="300" alt="Galeria CSS 4" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="espacio">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="galeria">
+                            <input type="radio" name="navegacion3" id="_1" checked>
+                            <input type="radio" name="navegacion3" id="_2">
+                            <input type="radio" name="navegacion3" id="_3">
+                            <input type="radio" name="navegacion3" id="_4">
+                            <img src="https://i.pinimg.com/originals/70/79/44/70794492c24ea5cf20bcb0605e79d83f.jpg"
+                                width="260" height="300" alt="Galeria CSS 1" />
+                            <img src="https://lh3.googleusercontent.com/proxy/1q8sIgt9RB0L-hwa6DunfNFYREHWayjjHWTzDdCh2wScL1mr1PJtBUe_Oi2M-cBpqMOxxzCMiqTbgdK2RDjOuUBlZCR6Z5dHAP46OdAnzb0blX7fYeQ71M_NyOy5ew"
+                                width="260" height="300" alt="Galeria CSS 2" />
+                            <img src="https://fpp.org.pe/wp-content/uploads/2019/06/futbol-5-3.jpg" width="260"
+                                height="300" alt="Galeria CSS 3" />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4ydGuN13Gwwm7SWVkzV35fa49yVvrdRnUB66SX4zZ_GXdjXTO&usqp=CAU"
+                                width="260" height="300" alt="Galeria CSS 4" />
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </span>
+    </a>
+</form>
